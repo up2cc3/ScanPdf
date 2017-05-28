@@ -31,13 +31,6 @@ public class ReadPdf {
                 String resultado = instance.doOCR(f.getImageFile(), area);
                 if (resultado != null) {
                     resultado = resultado.substring(0,5);
-                    char[] arrayChar = resultado.toCharArray();
-
-                    for(int i=0; i<arrayChar.length; i++){
-
-                            System.out.println( arrayChar[i] + " -> "+i);
-                    }
-
                     System.out.println(resultado);
 
                     File newfile = new File(carpetaFinal + resultado + ".pdf");
